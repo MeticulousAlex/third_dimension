@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import Assistant from './AssistantBlob/AssistantBlob';
 import './App.css';
 
 function App() {
+
+//AssistantBlob temp
+const [speedSlider, setSpeedSlider] = React.useState(13);
+const [spikesSlider, setSpikesSlider] = React.useState(0.6);
+const [processingSlider, setProcessingSlider] = React.useState(1);
+
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Assistant speedSlider={speedSlider} setSpeedSlider={setSpeedSlider} spikesSlider={spikesSlider} setSpikesSlider={setSpikesSlider} processingSlider={processingSlider} setProcessingSlider={setProcessingSlider}/>
     </div>
   );
 }
