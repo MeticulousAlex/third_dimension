@@ -1,50 +1,54 @@
-.blob {
+.blob-orbit {
     width:100%;
-    overflow-x:hidden;
+    /* overflow:hidden; */
+    width: 100vw;
+    height: 100vh;
     position: relative;
+    display:block;
 }
 
 .canvas {
     width:100%;
-    margin-top: -7%;
-
+    height:100%;
+    pointer-events:none;
     @media screen and (max-width: 1200px) {
-        margin-top: -10%;
         width: 800px;
     }
-    @media screen and (max-width: 600px) {
-        width: 400px;
+    @media screen and (max-width: 768px) {
+        width: 600px;
     }
 }
 
 .controls {
-    background: #3F4656;
     display: flex;
+    justify-content: space-between;
+    pointer-events: none;
     padding: 20px;
-    border-radius: 10px;
-    position: relative;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%);
     z-index: 3;
-    width:100%;
-    max-width:400px;
-    box-shadow: 0 4px 20px -1px rgba(18, 22, 33, .7);
-    
-    @media(max-width: 1200px) {
-        margin-top: -4%;
-    }
-    @media(max-width: 600px) {
-        flex-direction: column;
-        max-width:60%;
-    }
-    label {
-        color: #CDD9ED;
-        font-weight: 500;
-        font-size: 14px;
-        display: block;
-        margin-bottom: 16px;
-        @media(max-width: 600px) {
-            margin-bottom: 12px;
-        }
-    }
+    width:80%;
+}
+
+.controls__button{
+    background:none;
+    pointer-events: all;
+    border:none;
+    width:40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transition: opacity linear 0.1s;
+}
+
+.controls__button:hover{
+    cursor:pointer;
+    opacity:0.7;
+}
+
+.controls__button_left{
+    transform:rotateY(180deg);
 }
 
 .slider{
