@@ -66,7 +66,6 @@ const SimplexBlob = (props) => {
   
     useFrame((state) => {
       const { clock } = state;
-      console.log(props.rotation);
       if (props.rotation < 0){
         // setCurrentPosition([3 * Math.sin(2*Math.PI + additionalAngle + Math.PI/180), 0, 3 * Math.cos(2*Math.PI + additionalAngle + Math.PI/180)]);
         // setAdditionalAngle(additionalAngle+Math.PI/180);
